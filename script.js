@@ -77,6 +77,18 @@ const fetchApi = async () => {
   });
 };
 
+// requisito 6
+const createClearButton = () => {
+  const clearButton = document.getElementsByClassName('empty-cart')[0];
+  const cartItems = document.getElementsByClassName('cart__items')[0];
+  const cartCust = document.getElementsByClassName('total-price')[0];
+  clearButton.addEventListener('click', () => {
+    cartItems.innerHTML = '';
+    cartCust.innerText = 0;
+    localStorage.clear();
+  });
+};
+
 // requisito 4
 function getLocalStorage() {
   containerFather.innerHTML = localStorage.getItem('cartItemsList');
@@ -89,4 +101,5 @@ function getLocalStorage() {
 window.onload = function onload() {
   fetchApi();
   getLocalStorage();
+  createClearButton();
  };
