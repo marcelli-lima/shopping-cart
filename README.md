@@ -1,4 +1,4 @@
-# shopping-cart
+# Shopping Cart
 
 ## Este projeto consiste em criar um carrinho de compras totalmente dinâmico consumindo dados da api do Mercado Livre para buscar produtos a venda.
 
